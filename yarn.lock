@@ -7013,6 +7013,13 @@ libxmljs@^0.19.7:
     nan "~2.14.0"
     node-pre-gyp "~0.11.0"
 
+lie@3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/lie/-/lie-3.1.1.tgz#9a436b2cc7746ca59de7a41fa469b3efb76bd87e"
+  integrity sha1-mkNrLMd0bKWd56QfpGmz77dr2H4=
+  dependencies:
+    immediate "~3.0.5"
+
 lie@~3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/lie/-/lie-3.3.0.tgz#dcf82dee545f46074daf200c7c1c5a08e0f40f6a"
@@ -7066,6 +7073,21 @@ loader-utils@^1.1.0, loader-utils@^1.2.3, loader-utils@^1.4.0:
     big.js "^5.2.2"
     emojis-list "^3.0.0"
     json5 "^1.0.1"
+
+localbase@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/localbase/-/localbase-0.7.5.tgz#1730cb7dea01e14bd123c7f3753d29f96a18ceac"
+  integrity sha512-LikkGiX/HdR0kZUUmoBjPMD5qyLBbO5SfQOPkZVXea3QwQTZBy5JxbRiEC1xy9tagFCfi90OP+23/V6Da/7DbQ==
+  dependencies:
+    localforage "^1.7.4"
+    ordered-uuid "^1.1.0"
+
+localforage@^1.7.4:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/localforage/-/localforage-1.10.0.tgz#5c465dc5f62b2807c3a84c0c6a1b1b3212781dd4"
+  integrity sha512-14/H1aX7hzBBmmh7sGPd+AOMkkIrHM3Z1PAyGgZigA1H1p5O5ANnMyWzvpAETtG68/dC4pC0ncy3+PPGzXZHPg==
+  dependencies:
+    lie "3.1.1"
 
 locate-path@^2.0.0:
   version "2.0.0"
@@ -7952,6 +7974,13 @@ optionator@^0.9.1:
     prelude-ls "^1.2.1"
     type-check "^0.4.0"
     word-wrap "^1.2.3"
+
+ordered-uuid@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ordered-uuid/-/ordered-uuid-1.1.0.tgz#ffeb8cf8c61e7d084c49fed8a0203e48dd059ed1"
+  integrity sha1-/+uM+MYefQhMSf7YoCA+SN0FntE=
+  dependencies:
+    uuid "^3.0.1"
 
 original@^1.0.0:
   version "1.0.2"
@@ -11209,7 +11238,7 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@^3.3.2, uuid@^3.4.0:
+uuid@^3.0.1, uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
