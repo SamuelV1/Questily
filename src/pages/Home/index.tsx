@@ -44,7 +44,8 @@ export default function Home() {
 const Card = (props: any) => {
     const history = useHistory();
    const [amount, setAmount] = useState(0)
-   const [started, setStarted] = usestate(false)
+   const [started, setStarted] = useState(false)
+   
     function percentage(data: [collection]){
         for (var i = 0; i < data.length; i++) {
             let vehicle = data[i];

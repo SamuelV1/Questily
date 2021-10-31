@@ -1,0 +1,1 @@
+export { ReactComponent as code } from './code.svg'

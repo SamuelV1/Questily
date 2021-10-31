@@ -1,10 +1,24 @@
+// lib de local storage
+import localforage from 'localforage'
 
-import data from '../data/Questions.json'
 
-
-export function useData(tipo? :string) {
-    if(!tipo){
-        return data
+interface collection {
+        field1: string,
+        string: string,
+        field3: string, 
     }
-    return data.filter(item => item.field1 === tipo) 
+
+export async function useData(tipo?:string) {
+          await localforage.getItem<collection[]>('Aulas').then((value)=>{
+                 return value
+         }) 
 }
+export async function getStorage(tipo?:string): Promise<any> {
+        try {
+            const result =  await localforage.getItem<collection[]>('Aulas');
+            if(!tipo) return result
+            if(result) return result.filter((item: { field1: string; }) => item.field1 === tipo) 
+        }
+        catch(e) { console.log(e) }
+    }
+    
