@@ -1,39 +1,78 @@
-import React, {useEffect} from 'react'
-import { useData } from '../../hooks/datagrabbler'
-import { DataInitializer, db } from '../../data/database'
+import React, {useEffect, useState} from 'react'
+import { useHistory } from 'react-router-dom'
+// lib de local storage
+import localforage from 'localforage'
 
+import { DataInitializer } from '../../data/database'
+import { getStorage } from '../../hooks/datagrabbler'
+// estilo
+import * as S from './style'
+import * as icon from '../../ui/index'
 interface collection {
     field1: string,
     string: string,
     field3: string, 
 }
-interface question{
-    topicName: string, 
-    questions: string,
-    isStarted: boolean,
-    doneQuestions: number,
-}
+
 
 export default function Home() {
+    
 
      // checka o local base e se não tiver aulas cadastradas seta as aulas
     useEffect(() => {
-        db.collection('Aulas').get().then((users: [collection]) => {
-            users.length <= 1 ? DataInitializer():console.log('possui items')
-          })
-    
+        async function start(){
+            const StoreData = await localforage.getItem<collection[]>('Aulas')
+          if (!StoreData) return  DataInitializer()
+        
+        }
+        
+        start()
+       
       }, [])
+      
    
-   
-
-    function dataHandler(){
-        console.log("massa")   
-    }
-    
-    
     return (
         <div>
-            <button onClick={dataHandler}>DataPrinter</button>
+           <Card tittle='misturar'>misturar</Card>
+           <Card tittle='mergin'>Mergin</Card>
+           <Card tittle='Array'>Array</Card>
         </div>
+    )
+}
+
+
+const Card = (props: any) => {
+    const history = useHistory();
+   const [amount, setAmount] = useState(0)
+   const [started, setStarted] = usestate(false)
+    function percentage(data: [collection]){
+        for (var i = 0; i < data.length; i++) {
+            let vehicle = data[i];
+    
+            if ( vehicle.field3 === "<->" )
+                console.log('iniciado');
+        }    
+    }
+
+   useEffect(() => {
+        function number(){
+        getStorage(props.tittle).then(data => {setAmount(data.length); percentage(data)})
+
+        }
+        
+        number()
+    }, [])
+
+    function clickHandler(){
+        history.push(`/${props.tittle}`)
+    }
+
+    return (
+        <S.MenuButton onClick={clickHandler}>
+            <S.SvgBox><icon.code></icon.code></S.SvgBox>
+            <S.TextBox><S.ButtonText>{props.tittle}</S.ButtonText>
+        <S.TotalQuestion>questoes: <span>{amount}</span></S.TotalQuestion></S.TextBox>
+            
+        </S.MenuButton>
     )
 }
