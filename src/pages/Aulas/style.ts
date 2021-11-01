@@ -28,3 +28,20 @@ a{
 }
 
 `
+interface TextProp  {
+    name: string;
+}
+export const Headeee = styled.h1<TextProp>`
+background: ${props => props.name === '<->' ? '#3b5998' : 'white'};
+
+`
+export const DeleteButton = styled.button`
+    background: red;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    width: 8px;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+`

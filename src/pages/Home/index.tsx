@@ -45,19 +45,27 @@ const Card = (props: any) => {
     const history = useHistory();
    const [amount, setAmount] = useState(0)
    const [started, setStarted] = useState(false)
-   
+    const [done, setdone] = useState(0)
+
+   function calculate(partialValue: number, totalValue: number) {
+    return (100 * partialValue) / totalValue;
+ }
+
     function percentage(data: [collection]){
+        let total = []
         for (var i = 0; i < data.length; i++) {
             let vehicle = data[i];
-    
+            // mudar para condicionamento de iniciado
             if ( vehicle.field3 === "<->" )
-                console.log('iniciado');
+                total.push(vehicle)
         }    
+        setdone(calculate(data.length, total.length))
+
     }
 
    useEffect(() => {
         function number(){
-        getStorage(props.tittle).then(data => {setAmount(data.length); percentage(data)})
+        getStorage(props.tittle).then(data => {setAmount(data.length) /*; percentage(data) */})
 
         }
         
@@ -73,7 +81,7 @@ const Card = (props: any) => {
             <S.SvgBox><icon.code></icon.code></S.SvgBox>
             <S.TextBox><S.ButtonText>{props.tittle}</S.ButtonText>
         <S.TotalQuestion>questoes: <span>{amount}</span></S.TotalQuestion></S.TextBox>
-            
+            {started === true ? <h1>{done}% ja feito</h1> : <h1>Não iniciado</h1> }
         </S.MenuButton>
     )
 }
