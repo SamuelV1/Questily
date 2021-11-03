@@ -27,21 +27,16 @@ export default  function Aulas() {
     
     useEffect(() => {
         getStorage(category).then(data => setState(data))
-     }, [])
+     })
      
       function onRemoveFile(name : any){
-           
-        
             localforage.getItem<collection[]>('Aulas').then(function (item) {
                 if(item){
-                   
                     // muda o valor no banco de dados
                     let a = item.findIndex((x: { question: string; }) => x.question === name)
                     item[a].field3 = 'Done'
                     
                     localforage.setItem('Aulas', item );
-
-                    
                 }
                 // muda o state localmente 
                 let b = state.findIndex((x: { question: string; }) => x.question === name)
@@ -58,18 +53,33 @@ export default  function Aulas() {
         <div>
             <S.Header> <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/sparkles_2728.png" alt="" /> <h1>Desafios de {category}</h1></S.Header>
                 <S.Crumbler><a href="/">Topicos</a><span>/</span>{category}</S.Crumbler>
+            <S.TABLE>
+            <S.THEAD>
+                <tr>
+                    <S.TH>Questões</S.TH>
+                    <S.TH>Status</S.TH>
+                    <S.TH>Concluir</S.TH>
+                </tr>
+            </S.THEAD>
+            <tbody>
             { state.map((file: collection, idx) => (
+               <S.TR>
+                   <td> <S.Headeee name={file.field3} key={idx}>{file.question}
+              </S.Headeee></td>
+              <td> {file.field3 === 'Done' ?  <S.Done> <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/check-mark_2714-fe0f.png" alt="Done Simbol" /> Concluido</S.Done> :<S.NotDone><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/cross-mark_274c.png" alt="X" /> Incompleto</S.NotDone> }</td>
+              <td><S.DeleteButton
+             
+             onClick={() => onRemoveFile(file.question)}
+           >AAAAA</S.DeleteButton></td>
+              </S.TR>
+       
+          )) } 
               
-                <S.Headeee name={file.field3} key={idx}>{file.field1}
-                {file.field3}
-                <S.DeleteButton
-               
-                onClick={() => onRemoveFile(file.question)}
-              >AAAAA</S.DeleteButton>
-                </S.Headeee>
-                
-         
-            )) } 
+             
+            </tbody>
+            </S.TABLE>
+            
+           
         </div>
     )
 }
