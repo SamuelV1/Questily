@@ -31,17 +31,46 @@ a{
 interface TextProp  {
     name: string;
 }
-export const Headeee = styled.h1<TextProp>`
-background: ${props => props.name === '<->' ? '#3b5998' : 'white'};
-
+export const Headeee = styled.p<TextProp>`
+color: #835afd;
+font-weight: bold;
+font-family: 'Lato', sans-serif;
+margin: 0;
 `
 export const DeleteButton = styled.button`
-    background: red;
-    border: none;
-    color: white;
     padding: 8px 15px;
     width: 8px;
     flex-direction: column;
     align-items: flex-end;
     cursor: pointer;
+`
+export const TABLE = styled.table`
+width: 100%;
+tr:nth-child(even){background-color: #fff3fb;}
+td{
+  border: 1px solid #efebf4;
+  padding: 8px;
+}
+border-collapse: collapse;
+`
+
+export const TR = styled.tr`
+text-align: center;
+
+`
+export const THEAD = styled.thead`
+ border-collapse: collapse;
+  width: 100%;
+  background-color: #835afd;
+color: white;
+`
+export const TH = styled.th`
+ padding: 8px;
+`
+export const Done = styled.p`
+ img {height: 16px;}
+ color: green;
+`
+export const NotDone = styled(Done)`
+color: red;
 `
