@@ -53,24 +53,25 @@ export default  function Aulas() {
         <div>
             <S.Header> <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/sparkles_2728.png" alt="" /> <h1>Desafios de {category}</h1></S.Header>
                 <S.Crumbler><a href="/">Topicos</a><span>/</span>{category}</S.Crumbler>
+        <S.Container>
             <S.TABLE>
             <S.THEAD>
                 <tr>
                     <S.TH>Questões</S.TH>
                     <S.TH>Status</S.TH>
-                    <S.TH>Concluir</S.TH>
+                    <S.TH>end</S.TH>
                 </tr>
             </S.THEAD>
             <tbody>
             { state.map((file: collection, idx) => (
-               <S.TR>
+               <S.TR key={idx}>
                    <td> <S.Headeee name={file.field3} key={idx}>{file.question}
               </S.Headeee></td>
               <td> {file.field3 === 'Done' ?  <S.Done> <img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/check-mark_2714-fe0f.png" alt="Done Simbol" /> Concluido</S.Done> :<S.NotDone><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/285/cross-mark_274c.png" alt="X" /> Incompleto</S.NotDone> }</td>
               <td><S.DeleteButton
              
              onClick={() => onRemoveFile(file.question)}
-           >AAAAA</S.DeleteButton></td>
+           ><img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/check-mark_2714-fe0f.png" alt="Done Simbol" /></S.DeleteButton></td>
               </S.TR>
        
           )) } 
@@ -78,7 +79,7 @@ export default  function Aulas() {
              
             </tbody>
             </S.TABLE>
-            
+            </S.Container>
            
         </div>
     )

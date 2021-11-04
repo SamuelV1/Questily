@@ -32,11 +32,12 @@ export default function Home() {
       
    
     return (
-        <div>
+        <S.Wrapper>
+            <Card tittle='Sorting'>Sorting</Card>
            <Card tittle='misturar'>misturar</Card>
            <Card tittle='mergin'>Mergin</Card>
            <Card tittle='Array'>Array</Card>
-        </div>
+        </S.Wrapper>
     )
 }
 
@@ -45,30 +46,24 @@ const Card = (props: any) => {
     const history = useHistory();
    const [amount, setAmount] = useState(0)
    const [started, setStarted] = useState(false)
-    const [done, setdone] = useState(0)
-
-   function calculate(partialValue: number, totalValue: number) {
-    return (100 * partialValue) / totalValue;
- }
-
+    
     function percentage(data: [collection]){
-        let total = []
         for (var i = 0; i < data.length; i++) {
             let vehicle = data[i];
             // mudar para condicionamento de iniciado
-            if ( vehicle.field3 === "<->" )
-                total.push(vehicle)
-        }    
-        setdone(calculate(data.length, total.length))
-
+            if ( vehicle.field3 === 'Done' ){
+                setStarted(true)  
+            }
+        }   
+       
     }
+
 
    useEffect(() => {
         function number(){
-        getStorage(props.tittle).then(data => {setAmount(data.length) /*; percentage(data) */})
+        getStorage(props.tittle).then(data => {setAmount(data.length); percentage(data) })
 
         }
-        
         number()
     }, [])
 
@@ -79,9 +74,12 @@ const Card = (props: any) => {
     return (
         <S.MenuButton onClick={clickHandler}>
             <S.SvgBox><icon.code></icon.code></S.SvgBox>
-            <S.TextBox><S.ButtonText>{props.tittle}</S.ButtonText>
-        <S.TotalQuestion>questoes: <span>{amount}</span></S.TotalQuestion></S.TextBox>
-            {started === true ? <h1>{done}% ja feito</h1> : <h1>Não iniciado</h1> }
+            <S.TextBox>
+                <S.ButtonText>{props.tittle}</S.ButtonText>
+                <S.TotalQuestion>questoes: <span>{amount}</span></S.TotalQuestion>
+                {started === true ? <S.Started>Iniciado</S.Started> : <S.NotStarted>Não iniciado</S.NotStarted> }
+            </S.TextBox>
+            
         </S.MenuButton>
     )
 }

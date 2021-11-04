@@ -38,14 +38,25 @@ font-family: 'Lato', sans-serif;
 margin: 0;
 `
 export const DeleteButton = styled.button`
-    padding: 8px 15px;
-    width: 8px;
+  
+    background-color: #835afd;
+    width: 29px;
+    height: 26px;
+    border: 0;
+    border-radius: 4px;
+    img {height: 16px;}
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     cursor: pointer;
 `
+export const Container = styled.div`
+	display: flex;
+	flex-direction: column;	
+	align-items: center;
+
+`
 export const TABLE = styled.table`
-width: 100%;
+width: 85%;
 tr:nth-child(even){background-color: #fff3fb;}
 td{
   border: 1px solid #efebf4;

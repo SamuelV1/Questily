@@ -31,5 +31,22 @@ span{
 }
 `
 export const TextBox = styled.div`
-margin: 12px 30px;
+margin: 10px 50px;
+`
+
+export const NotStarted = styled.p`
+color: red;
+font-weight: bold;
+`
+
+export const Started = styled(NotStarted)`
+color: green;
+`
+
+// main menu 
+export const Wrapper = styled.div`
+display: flex;
+flex-wrap: wrap;
+align-content: center;
+justify-content: center;
 `

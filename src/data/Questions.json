@@ -1,5 +1,4 @@
 [
-    
     {
         "field1": "Array",
         "question": "Find the Union and Intersection of the two sorted arrays.",
@@ -32,27 +31,47 @@
     },
     {
         "field1": "misturar",
-        "question": "Minimum no. of Jumps to reach end of an array",
+        "question": "Minimum no. aaaaaof Jumps to reach end of an array",
         "field3": "<->"
     },
     {
         "field1": "misturar",
-        "question": "Minimum no. of Jumps to reach end of an array",
+        "question": "Minimum no. ofaaa Jumps to reach end of an array",
         "field3": "<->"
     },
     {
         "field1": "misturar",
-        "question": "Minimum no. of Jumps to reach end of an array",
+        "question": "Minimum no. aaaddaaof Jumps to reach end of an array",
         "field3": "<->"
     },
     {
         "field1": "misturar",
-        "question": "Minimum no. of Jumps to reach end of an array",
+        "question": "Minimum no. of ssssJumps to reach end of an array",
         "field3": "<->"
     },
     {
         "field1": "mergin",
-        "question": "Minimum no. of Jumps to reach end of an array",
+        "question": "Minimum no. ofvvvvvv Jumps to reach end of an array",
+        "field3": "<->"
+    },
+    {
+        "field1": "Sorting",
+        "question": "Find first and last positions of an element in a sorted array",
+        "field3": "<->"
+    },
+    {
+        "field1": "Sorting",
+        "question": "Find a Fixed Point (Value equal to index) in a given array",
+        "field3": "<->"
+    },
+    {
+        "field1": "Sorting",
+        "question": "Search in a rotated sorted array",
+        "field3": "<->"
+    },
+    {
+        "field1": "Sorting",
+        "question": "square root of an integer",
         "field3": "<->"
     }
 ]
