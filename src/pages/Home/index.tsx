@@ -34,8 +34,18 @@ export default function Home() {
     return (
         <S.Wrapper>
             <Card tittle='Sorting'>Sorting</Card>
-           <Card tittle='misturar'>misturar</Card>
-           <Card tittle='mergin'>Mergin</Card>
+            <Card tittle='String'>String</Card>
+            <Card tittle='LinkedList'>LinkedList</Card>
+            <Card tittle='BinaryTrees'>BinaryTrees</Card>
+            
+            <Card tittle='Greedy'>Greedy</Card>
+            <Card tittle='BackTracking'>BackTracking</Card>
+            <Card tittle='Stacks'>Stacks</Card>
+
+            <Card tittle='Heap'>Heap</Card>
+            <Card tittle='Graph'>Graph</Card>
+
+           <Card tittle='Matrix'>Matrix</Card>
            <Card tittle='Array'>Array</Card>
         </S.Wrapper>
     )
@@ -65,7 +75,7 @@ const Card = (props: any) => {
 
         }
         number()
-    }, [])
+    })
 
     function clickHandler(){
         history.push(`/${props.tittle}`)
