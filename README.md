@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+﻿<h1 align="center"> Questily❓</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+um app para ajudar com questões de código do básico ao avançando 
 
-## Available Scripts
+## Ajudar o Projeto 📃
 
-In the project directory, you can run:
+Quer ajudar o projeto?
+traduza uma questão, qualquer que seja e já sera de muita ajuda.
 
-### `yarn start`
+## Uso 📖
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Escolha um tópico, entre e pesquise as perguntas, desse modo você vai conhecer novas praticas & praticar muitos desafio
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Live Server📡
+O projeto foi hospedado no netlify (Minha plataforma favorita de hospedagem)
 
-### `yarn test`
+acesse aqui [Questily](google.com)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias
 
-### `yarn build`
+As tecnologias usada no projeto foram as seguintes:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- typescript
+- react.js
+- styled-components 
+- localforage
+- React-Router-Dom
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Editar, Refazer ou mudar
 
-### `yarn eject`
+Para adicionar uma nova funcionalidade ou simplesmente rodar o projeto localmente siga este tutorial simples:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```git
+$ git clone <LinkDesteRepositorio/>
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+e então:
+```cmd
+$ yarn Dev
+```
