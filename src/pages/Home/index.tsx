@@ -86,7 +86,7 @@ const Card = (props: any) => {
             <S.SvgBox><icon.code></icon.code></S.SvgBox>
             <S.TextBox>
                 <S.ButtonText>{props.tittle}</S.ButtonText>
-                <S.TotalQuestion>questoes: <span>{amount}</span></S.TotalQuestion>
+                <S.TotalQuestion>questões: <span>{amount}</span></S.TotalQuestion>
                 {started === true ? <S.Started>Iniciado</S.Started> : <S.NotStarted>Não iniciado</S.NotStarted> }
             </S.TextBox>
             
