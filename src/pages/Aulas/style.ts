@@ -85,3 +85,24 @@ export const Done = styled.p`
 export const NotDone = styled(Done)`
 color: red;
 `
+export const Search = styled.input`
+background-color: #e9f8ff;
+  border: 2px black solid;
+ padding: 12px;
+border-radius: 5px;
+`
+export const ResetButtn = styled.button`
+background-color: #000000;
+border: 0;
+padding: 12px;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+
+`
+
+export const Form = styled.form`
+	display: flex;
+	justify-content: center;
+	margin: 11px;
+`
