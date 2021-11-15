@@ -14,7 +14,7 @@ Escolha um tópico, entre e pesquise as perguntas, desse modo você vai conhecer
 ## Live Server📡
 O projeto foi hospedado no netlify (Minha plataforma favorita de hospedagem)
 
-acesse aqui [Questily](google.com)
+acesse aqui [Questily](https://amazing-almeida-55373f.netlify.app/)
 
 ## Tecnologias
 
